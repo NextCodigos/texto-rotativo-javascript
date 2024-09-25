@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Serie Ejercicios Resueltos en Javascript - Ejercicio 3: Imágenes Rotativas</title>
+    <meta name="description" content="Muestra imágenes por pantalla rotativamente">
+    <meta name="author" content="Chema Moreno - www.pupitredigital.com">
+</head>
+
+<body>
+    <img id="salida" width="200" height="200" />
+    <img id="salida2" width="200" height="200" />
+    <img id="salida3" width="200" height="200" />
+    <img id="salida4" width="200" height="200" />
+
+    <script>
+        var imagenes = [   // URLs de imágenes
+                        "https://example.com/imagen1.jpg",
+                        "https://example.com/imagen2.jpg",
+                        "https://example.com/imagen3.jpg",
+                        "https://example.com/imagen4.jpg",
+                        "https://example.com/imagen5.jpg",
+                        "https://example.com/imagen6.jpg"
+                    ],
+            ind = 0;            // índice de la imagen actual
+
+        setInterval(MuestraSiguienteImagen, 2000);  // Ejecutar cada 2 segundos la función MSR
+
+        function MuestraSiguienteImagen(){
+            ind++;              // pasamos a la siguiente imagen
+            if(ind >= imagenes.length){ // Si ya se han mostrado todas las imágenes...
+                ind = 0;        // ... muéstralas de nuevo desde la primera
+            }
+            document.getElementById("salida").src = imagenes[ind];
+            document.getElementById("salida2").src = imagenes[ind];
+            document.getElementById("salida3").src = imagenes[ind];
+            document.getElementById("salida4").src = imagenes[ind];
+        }
+    </script>
+</body>
+
+</html>
