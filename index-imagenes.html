@@ -15,17 +15,17 @@
     <img id="salida4" width="200" height="200" />
 
     <script>
-        var imagenes = [   // URLs de imágenes
-                        "https://example.com/imagen1.jpg",
-                        "https://example.com/imagen2.jpg",
-                        "https://example.com/imagen3.jpg",
-                        "https://example.com/imagen4.jpg",
-                        "https://example.com/imagen5.jpg",
-                        "https://example.com/imagen6.jpg"
-                    ],
-            ind = 0;            // índice de la imagen actual
+var imagenes = [   // URLs de imágenes gratuitas
+    "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
+    "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg",
+    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
+    "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
+    
+],
+ind = 0;            // índice de la imagen actual
 
-        setInterval(MuestraSiguienteImagen, 2000);  // Ejecutar cada 2 segundos la función MSR
+setInterval(MuestraSiguienteImagen, 2000);  // Ejecutar cada 2 segundos la función MSR
 
         function MuestraSiguienteImagen(){
             ind++;              // pasamos a la siguiente imagen
